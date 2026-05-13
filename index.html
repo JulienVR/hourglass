@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hourglass Tournament 2026 — Back to the Future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="/main.js"></script>
+    <link rel="icon" type="image/png" href="pictures/favicon.png" />
+    <meta property="og:image" content="pictures/favicon.png" />
+  </head>
+  <body>
+    <nav
+      class="site-nav fixed top-0 left-0 right-0 z-[100] bg-white/92 backdrop-blur-lg shadow-sm transition-[background,box-shadow] duration-300"
+      id="site-nav"
+    >
+      <div class="container py-4 flex items-center justify-between">
+        <a
+          href="#"
+          class="flex items-center gap-4 font-display text-lg font-semibold text-text hover:text-primary"
+        >
+          <img
+            src="pictures/favicon.png"
+            alt="Whitefoxes"
+            class="w-10 h-10 rounded-full object-contain"
+          />
+          <span>Hourglass 2026</span>
+        </a>
+        <ul class="hidden md:flex gap-8">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#programme" class="nav-link">Program</a></li>
+          <li><a href="#rules" class="nav-link">Rules</a></li>
+          <li><a href="#practical" class="nav-link">Practical</a></li>
+          <li><a href="#teams" class="nav-link">Teams</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <img src="pictures/logo2.jpeg" alt="" class="hero-bg-img" />
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-bg-shine"></div>
+      </div>
+
+      <div class="hero-inner">
+        <div class="hero-headline">
+          <h1 class="hero-title">
+            Hourglass <span class="hero-year">2026</span>
+          </h1>
+          <p class="hero-subtitle">Ultimate Tournament</p>
+        </div>
+
+        <div class="hero-body">
+          <div class="hero-main">
+            <div class="hero-brand">
+              <img src="pictures/favicon.png" alt="" class="hero-logo" />
+              <div>
+                <p class="hero-club">10 years of Whitefoxes 🎉</p>
+              </div>
+            </div>
+            <div class="hero-theme">
+              <span class="hero-theme-label">Theme</span>
+              <p class="hero-theme-name">"Back to the Future"</p>
+            </div>
+
+            <div class="hero-dates" aria-label="Tournament dates">
+              <div class="hero-date">
+                <span class="hero-date-day">Fri</span>
+                <span class="hero-date-num">8 Aug</span>
+              </div>
+              <span class="hero-dates-arrow" aria-hidden="true">→</span>
+              <div class="hero-date">
+                <span class="hero-date-day">Sun</span>
+                <span class="hero-date-num">10 Aug</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-timeline">
+            <div
+              class="theme-galleria"
+              id="theme-galleria"
+              aria-label="Theme timeline"
+              tabindex="0"
+            >
+              <h3
+                class="galleria-label font-display text-sm font-bold text-white/70 text-center mb-4 uppercase tracking-widest"
+              >
+                Hourglass Through the years
+              </h3>
+              <div class="galleria-frame">
+                <button
+                  type="button"
+                  class="galleria-btn galleria-btn--prev"
+                  aria-label="Previous year"
+                >
+                  &#8249;
+                </button>
+                <div class="galleria-slide">
+                  <img class="galleria-img" src="" alt="" />
+                  <div
+                    class="galleria-caption absolute inset-x-0 bottom-0 px-6 pt-6 pb-4 bg-gradient-to-t from-[rgba(26,26,46,0.85)] to-transparent text-white text-left"
+                  >
+                    <span
+                      class="galleria-year block font-display text-sm font-semibold opacity-85"
+                    ></span>
+                    <strong
+                      class="galleria-theme block font-display text-lg font-bold leading-tight mt-0.5"
+                    ></strong>
+                    <span
+                      class="galleria-sub block text-xs opacity-80 mt-0.5"
+                    ></span>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="galleria-btn galleria-btn--next"
+                  aria-label="Next year"
+                >
+                  &#8250;
+                </button>
+              </div>
+              <div class="galleria-info" aria-live="polite">
+                <span
+                  class="galleria-info-year block font-display text-sm font-semibold text-white/60"
+                ></span>
+                <strong
+                  class="galleria-info-theme block font-display text-xl font-bold text-white mt-1"
+                ></strong>
+                <span
+                  class="galleria-info-sub block text-sm text-white/60 mt-0.5"
+                ></span>
+              </div>
+              <div
+                class="galleria-dots flex justify-center gap-1.5 md:gap-4 mt-4 md:mt-6 flex-nowrap md:flex-wrap"
+                role="tablist"
+                aria-label="Select year"
+              ></div>
+              <div
+                class="galleria-time-arrow flex items-center justify-center gap-4 mt-4 px-8 font-display text-xs font-semibold text-white/50"
+                aria-hidden="true"
+              >
+                <span>2018</span>
+                <span
+                  class="galleria-time-arrow-line flex-1 max-w-[280px] h-0.5 bg-gradient-to-r from-white/30 to-accent relative"
+                ></span>
+                <span>2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <a href="#about" class="scroll-hint scroll-hint--hero" aria-label="Scroll down to content">
+        <span>Dive in !</span>
+        <span class="scroll-hint-arrow" aria-hidden="true">↓</span>
+      </a> -->
+    </header>
+
+    <main>
+      <section class="section bg-bg" id="about">
+        <div class="container">
+          <div class="section-head"><h2 class="section-title">About</h2></div>
+          <div class="max-w-[640px] mx-auto text-center">
+            <p class="text-xl font-medium text-text leading-relaxed mb-6">
+              Three days of ultimate, music, and camping — and a decade of
+              Whitefoxes Ultimate.
+            </p>
+            <p class="text-text-muted mb-6 leading-relaxed">
+              2026 marks the 10th anniversary of the White Foxes.
+            </p>
+            <p class="text-text-muted mb-6 leading-relaxed">
+              To celebrate a decade of ultimate frisbee and unforgettable
+              memories, this year's Hourglass Tournament will take you on a
+              journey through time. From Ancient Egypt to the Roaring Twenties,
+              Woodstock and many other worlds explored throughout the
+              tournament's history, every era will be part of the adventure.
+            </p>
+            <p class="text-text-muted mb-6 leading-relaxed">
+              Whether you've been with us since the early days or are
+              discovering the White Foxes for the first time, join us for a
+              unique weekend where past and present come together to celebrate
+              ten years of the club's story.
+            </p>
+            <p class="text-text-muted mb-6 leading-relaxed">
+              Time flies. Let's travel through it together.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-bg-2" id="programme">
+        <div class="container">
+          <div class="section-head"><h2 class="section-title">Program</h2></div>
+          <p class="text-text-muted mb-6 leading-relaxed text-center">
+            Coming soon...
+          </p>
+          <!-- <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr_1fr] gap-8 items-start">
+
+            <div class="day-card day-card--fri">
+              <div class="day-head"><h3 class="day-name">Friday</h3></div>
+              <ul class="event-list py-4">
+                <li class="event"><span class="event-time">18:30</span><div class="event-body"><strong>Welcome</strong><span>Dinner &amp; party</span></div></li>
+                <li class="event"><span class="event-time">21:00</span><div class="event-body"><strong>Noémie</strong><span>Folk &amp; covers</span></div></li>
+                <li class="event"><span class="event-time">23:00</span><div class="event-body"><strong>Don Guillaume &amp; Gourmand</strong><span>DJ set</span></div></li>
+              </ul>
+            </div>
+
+            <div class="day-card day-card--main">
+              <div class="day-head"><h3 class="day-name">Saturday</h3></div>
+              <ul class="event-list py-4">
+                <li class="event"><span class="event-time">08:00</span><div class="event-body"><strong>Yoga by Hélène</strong></div></li>
+                <li class="event"><span class="event-time">08:15</span><div class="event-body"><strong>Breakfast</strong></div></li>
+                <li class="event event--highlight"><span class="event-time">09:30</span><div class="event-body"><strong>Games start</strong></div></li>
+                <li class="event"><span class="event-time">12:30</span><div class="event-body"><strong>Lunch &amp; Nemoon</strong><span>Folk</span></div></li>
+                <li class="event event--highlight"><span class="event-time">18:00</span><div class="event-body"><strong>Games end</strong></div></li>
+                <li class="event"><span class="event-time">18:30</span><div class="event-body"><strong>Drinks</strong></div></li>
+                <li class="event"><span class="event-time">19:30</span><div class="event-body"><strong>Costume time</strong><span>Back to the Future — any era goes</span></div></li>
+                <li class="event"><span class="event-time">20:00</span><div class="event-body"><strong>Fanfare Royale de Beignée</strong></div></li>
+                <li class="event"><span class="event-time">20:30</span><div class="event-body"><strong>Dinner</strong></div></li>
+                <li class="event"><span class="event-time">21:00</span><div class="event-body"><strong>Face &amp; body painting</strong></div></li>
+                <li class="event"><span class="event-time">21:30</span><div class="event-body"><strong>Gaspard Trio</strong><span>Jazz</span></div></li>
+                <li class="event"><span class="event-time">22:30</span><div class="event-body"><strong>Korat</strong><span>Rap</span></div></li>
+                <li class="event"><span class="event-time">23:30</span><div class="event-body"><strong>Kaâm</strong><span>DJ</span></div></li>
+                <li class="event"><span class="event-time">01:00</span><div class="event-body"><strong>Sir D</strong><span>DJ</span></div></li>
+              </ul>
+            </div>
+
+            <div class="day-card day-card--sun">
+              <div class="day-head"><h3 class="day-name">Sunday</h3></div>
+              <ul class="event-list py-4">
+                <li class="event"><span class="event-time">08:00</span><div class="event-body"><strong>Yoga by Hélène</strong></div></li>
+                <li class="event"><span class="event-time">08:15</span><div class="event-body"><strong>Breakfast</strong></div></li>
+                <li class="event event--highlight"><span class="event-time">09:30</span><div class="event-body"><strong>Games start</strong></div></li>
+                <li class="event"><span class="event-time">12:30</span><div class="event-body"><strong>Lunch</strong></div></li>
+                <li class="event event--highlight"><span class="event-time">16:00</span><div class="event-body"><strong>Games end</strong></div></li>
+                <li class="event"><span class="event-time">16:15</span><div class="event-body"><strong>Awards ceremony</strong></div></li>
+              </ul>
+            </div>
+
+          </div> -->
+        </div>
+      </section>
+
+      <section class="section bg-bg" id="rules">
+        <div class="container">
+          <div class="section-head"><h2 class="section-title">Rules</h2></div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="rule-card rule-card--primary">
+              <div class="card-icon">◈</div>
+              <h3 class="card-heading">Tournament Format</h3>
+              <p class="prose-sm">
+                Divided into <strong>2 pool phases</strong> and ranking games.
+              </p>
+              <p class="prose-sm">
+                Phase 1: 3 pools of 4 teams — each plays 3 games. Top 2 from
+                each pool advance to upper pools; remaining 6 to lower pools.
+              </p>
+              <p class="prose-sm">
+                Ranking games: teams with identical results from each pool face
+                off — all the way up to the grand final.
+              </p>
+            </div>
+            <div class="rule-card rule-card--accent">
+              <div class="card-icon">◎</div>
+              <h3 class="card-heading">Match Rules</h3>
+              <ul class="rule-list mt-2">
+                <li>Played <strong>7 vs 7</strong> on grass fields</li>
+                <li>
+                  Regular mixed line-ups: ABBAABBA… format (4W+3M / 4M+3W)
+                </li>
+                <li>
+                  Toss decides jersey color, field side, starting gender &amp;
+                  O/D
+                </li>
+                <li>
+                  Match lasts <strong>50 minutes</strong> or first to 15 points
+                </li>
+                <li>Half-time at 8 points or 25 minutes</li>
+                <li>WFDF Rules of Ultimate 2021–2024</li>
+              </ul>
+            </div>
+            <div class="rule-card rule-card--secondary">
+              <div class="card-icon">⧗</div>
+              <h3 class="card-heading">Timeouts &amp; Cap</h3>
+              <ul class="rule-list mt-2">
+                <li>2 timeouts per team (not in last 5 min; max 1 min each)</li>
+                <li>Rounds 1 &amp; 2: no systematic cap — ties allowed</li>
+                <li>Ranking games: cap +1</li>
+                <li>Jingle signals end — finish point then clear field</li>
+                <li>Winning team reports score at the game stand</li>
+              </ul>
+            </div>
+            <div class="rule-card rule-card--purple">
+              <div class="card-icon">♡</div>
+              <h3 class="card-heading">Spirit</h3>
+              <p class="prose-sm">
+                At the end of the weekend, each team nominates
+                <strong>3 teams</strong> with the best spirit.
+              </p>
+              <p class="prose-sm">Play hard, play fair, play with heart.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="schedule-card">
+              <h4 class="schedule-head">Saturday Schedule</h4>
+              <div class="schedule-body">
+                <span class="text-3xl block mb-4">📅</span>
+                <p class="text-sm">
+                  Schedule posted on-site &amp; in team channels
+                </p>
+              </div>
+            </div>
+            <div class="schedule-card">
+              <h4 class="schedule-head">Sunday Schedule</h4>
+              <div class="schedule-body">
+                <span class="text-3xl block mb-4">📅</span>
+                <p class="text-sm">
+                  Schedule posted on-site &amp; in team channels
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-bg-2" id="practical">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Practical information</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="card p-10">
+              <div class="card-icon">🚗</div>
+              <h3 class="card-heading">Carpooling</h3>
+              <p class="prose-sm">Need a lift? Check the shared sheet.</p>
+              <a
+                href="https://docs.google.com/spreadsheets/d/1nO_J8WZ8fkY5Y6h-WIduebEI9rEV_etIJ9-_bDzRAFU/edit?usp=sharing"
+                class="btn-secondary mt-6"
+                target="_blank"
+                rel="noopener"
+                >Check the carpool sheet</a
+              >
+            </div>
+            <div class="card p-10">
+              <div class="card-icon">🍽</div>
+              <h3 class="card-heading">Food &amp; Beverages</h3>
+              <p class="prose-sm">
+                All meals included from <strong>Friday dinner</strong> through
+                <strong>Sunday lunch</strong>. Alcohol &amp; soft drinks
+                provided throughout.
+              </p>
+              <ul class="bullet-list my-4">
+                <li>Menus are <strong>vegetarian</strong></li>
+                <li>Gluten-free options available — let us know in advance</li>
+                <li>
+                  Bring your own
+                  <strong>plate, cutlery &amp; cup/drink holder</strong> — no
+                  plastic cups provided
+                </li>
+              </ul>
+            </div>
+            <div class="card p-10">
+              <div class="card-icon">⛺</div>
+              <h3 class="card-heading">Camping</h3>
+              <p class="prose-sm">
+                On-site camping. Bring your gear and follow the signs for tent
+                zones.
+              </p>
+            </div>
+            <div class="card p-10 flex flex-col gap-4">
+              <div class="card-icon mb-0">📍</div>
+              <h3 class="card-heading mb-0">Location</h3>
+              <p class="prose-sm mb-0">
+                <strong>Espace Européen d'Entreprise</strong><br />6560
+                Solre-Sur-Sambre
+              </p>
+              <a
+                href="https://maps.app.goo.gl/JJ8vpXJcqeymWRPU8"
+                class="btn-secondary"
+                target="_blank"
+                rel="noopener"
+                >Open in Maps</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-bg" id="teams">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Teams</h2>
+            <p class="section-desc">
+              12 teams and <span class="text-accent font-medium">6 themes</span>
+            </p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Egypt -->
+            <div class="team-card">
+              <div class="team-logo">
+                <div class="text-3xl leading-none">🐕</div>
+              </div>
+              <h4 class="team-name">Zinnekes</h4>
+              <p class="team-theme">Egypt</p>
+            </div>
+            <div class="team-card">
+              <div class="team-logo">
+                <img
+                  src="pictures/logo_owls.png"
+                  alt="Owls"
+                  loading="lazy"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h4 class="team-name">Owls</h4>
+              <p class="team-theme">Egypt</p>
+            </div>
+
+            <!-- Gauls -->
+            <div class="team-card">
+              <div class="team-logo">
+                <img
+                  src="pictures/logo_flywin.jpeg"
+                  alt="FlywiniX"
+                  loading="lazy"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h4 class="team-name">FlywiniX</h4>
+              <p class="team-theme">Gauls</p>
+            </div>
+            <div class="team-card">
+              <div class="team-logo">
+                <div class="text-3xl leading-none">🧑‍🤝‍🧑</div>
+              </div>
+              <h4 class="team-name">Team Friendship</h4>
+              <p class="team-theme">Gauls</p>
+            </div>
+
+            <!-- The Great Frisbee -->
+            <div class="team-card">
+              <div class="team-logo">
+                <img
+                  src="pictures/logo_oufti.png"
+                  alt="Ouftimates"
+                  loading="lazy"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h4 class="team-name">Oufti</h4>
+              <p class="team-theme">The Great Frisbee</p>
+            </div>
+            <div class="team-card">
+              <div class="team-logo">
+                <div class="text-3xl leading-none">💃</div>
+              </div>
+              <h4 class="team-name">Kabouterdansers</h4>
+              <p class="team-theme">The Great Frisbee</p>
+            </div>
+
+            <!-- Age of Maharajas and Maharanis -->
+            <div class="team-card">
+              <div class="team-logo">
+                <div class="text-3xl leading-none">🍌</div>
+              </div>
+              <h4 class="team-name">Sweet Bananas</h4>
+              <p class="team-theme">Age of Maharajas and Maharanis</p>
+            </div>
+            <div class="team-card">
+              <div class="team-logo">
+                <div class="text-3xl leading-none">🤔</div>
+              </div>
+              <h4 class="team-name">XLostintime</h4>
+              <p class="team-theme">Age of Maharajas and Maharanis</p>
+            </div>
+
+            <!-- Wild West -->
+            <div class="team-card">
+              <div class="team-logo">
+                <div class="text-3xl leading-none">🐺</div>
+              </div>
+              <h4 class="team-name">Birds Garou</h4>
+              <p class="team-theme">Wild West</p>
+            </div>
+            <div class="team-card">
+              <div class="team-logo">
+                <div class="text-3xl leading-none">💫</div>
+              </div>
+              <h4 class="team-name">ZapaRabbits</h4>
+              <p class="team-theme">Wild West</p>
+            </div>
+
+            <!-- Back to Woodstock -->
+            <div class="team-card">
+              <div class="team-logo">
+                <img
+                  src="pictures/whitefoxes-logo.jpg"
+                  alt="X-Foxes"
+                  loading="lazy"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h4 class="team-name">X-Foxes</h4>
+              <p class="team-theme">Back to Woodstock</p>
+            </div>
+            <div class="team-card">
+              <div class="team-logo">
+                <div class="text-3xl leading-none">✖️</div>
+              </div>
+              <h4 class="team-name">X-FLR6</h4>
+              <p class="team-theme">Back to Woodstock</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-bg-2" id="contact">
+        <div class="container">
+          <div class="section-head"><h2 class="section-title">Contact</h2></div>
+          <div class="text-center mb-12">
+            <a
+              href="mailto:hourglasstournament@gmail.com"
+              class="font-display text-[clamp(0.9rem,2vw,1.1rem)] font-semibold text-primary border-b-2 border-primary/30 pb-1 transition-[color,border-color] hover:text-primary-dim hover:border-primary"
+              >hourglasstournament@gmail.com</a
+            >
+          </div>
+          <div
+            class="flex flex-col md:flex-row gap-6 md:gap-12 justify-center flex-wrap"
+          >
+            <div class="info-block">
+              <span class="info-label">Location</span>
+              <a
+                href="https://maps.app.goo.gl/JJ8vpXJcqeymWRPU8"
+                target="_blank"
+                rel="noopener"
+                class="info-text"
+                >Espace Européen d'Entreprise<br />6560 Solre-Sur-Sambre</a
+              >
+            </div>
+            <div class="info-block">
+              <span class="info-label">Dates</span>
+              <p class="info-text">Fri 8 Aug – Sun 10 Aug</p>
+            </div>
+            <div class="info-block">
+              <span class="info-label">Carpool</span>
+              <a
+                href="https://docs.google.com/spreadsheets/d/1A-03a02r2eKWu026ArSORW3xkXKJwlosfPYOGH8Jjw4/edit?usp=sharing"
+                target="_blank"
+                rel="noopener"
+                class="info-text"
+                >View carpool sheet</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gradient-to-br from-[#1a1a2e] to-[#2d2d44] py-16 pb-12">
+      <div class="container text-center">
+        <img
+          src="pictures/favicon.png"
+          alt="Whitefoxes Ultimate"
+          class="w-20 h-20 rounded-full mx-auto mb-6 object-contain"
+        />
+        <p class="text-white/85 text-[0.95rem] mb-4">
+          Hourglass 2026 — 10 years of Whitefoxes Ultimate
+        </p>
+        <p class="font-display text-sm text-accent">See you on the fields.</p>
+      </div>
+    </footer>
+
+    <script>
+      const nav = document.getElementById("site-nav");
+      window.addEventListener("scroll", () => {
+        nav.classList.toggle("scrolled", window.scrollY > 80);
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const target = document.querySelector(a.getAttribute("href"));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+
+      const themes = [
+        {
+          year: 2018,
+          title: "Egypt",
+          subtitle: "",
+          image: "pictures/2018_Egypte.PNG",
+        },
+        {
+          year: 2019,
+          title: "Gauls",
+          subtitle: "",
+          image: "pictures/2019.jpg",
+        },
+        {
+          year: 2020,
+          title: "Covid",
+          subtitle: "",
+          image: "pictures/2020-covid.png",
+          cancelled: true,
+        },
+        {
+          year: 2021,
+          title: "No theme",
+          subtitle: "",
+          image: "pictures/2021_light_covid.jpg",
+          empty: true,
+        },
+        {
+          year: 2022,
+          title: "The Great Frisbee",
+          subtitle: "",
+          image: "pictures/2022_The great frisbee.jpg",
+        },
+        {
+          year: 2023,
+          title: "Age of Maharajas and Maharanis",
+          subtitle: "",
+          image: "pictures/2023_Le temps desMaharaja.jpg",
+        },
+        {
+          year: 2024,
+          title: "Wild West",
+          subtitle: "",
+          image: "pictures/2024_western (2).png",
+        },
+        {
+          year: 2025,
+          title: "Back to Woodstock",
+          subtitle: "",
+          image: "pictures/2025_Back to Woodstock.JPG",
+        },
+        {
+          year: 2026,
+          title: "Back to the Future",
+          subtitle: "",
+          image: "pictures/logo1.jpeg",
+          current: true,
+        },
+      ];
+
+      const galleria = document.getElementById("theme-galleria");
+      if (galleria) {
+        const img = galleria.querySelector(".galleria-img");
+        const yearEl = galleria.querySelector(".galleria-year");
+        const themeEl = galleria.querySelector(".galleria-theme");
+        const subEl = galleria.querySelector(".galleria-sub");
+        const infoYearEl = galleria.querySelector(".galleria-info-year");
+        const infoThemeEl = galleria.querySelector(".galleria-info-theme");
+        const infoSubEl = galleria.querySelector(".galleria-info-sub");
+        const slideEl = galleria.querySelector(".galleria-slide");
+        const dotsEl = galleria.querySelector(".galleria-dots");
+        const prevBtn = galleria.querySelector(".galleria-btn--prev");
+        const nextBtn = galleria.querySelector(".galleria-btn--next");
+        let index = themes.findIndex((t) => t.current);
+        if (index === -1) index = themes.length - 1;
+
+        const cycleMs = 3000;
+
+        function getActiveProgressRing() {
+          return galleria.querySelector(
+            ".galleria-dot--active .galleria-dot-ring-progress",
+          );
+        }
+
+        function restartProgress() {
+          const ring = getActiveProgressRing();
+          if (!ring) return;
+          ring.classList.remove("is-running");
+          ring.style.animation = "none";
+          void ring.offsetWidth;
+          ring.style.animation = `galleriaRingProgress ${cycleMs}ms linear forwards`;
+        }
+
+        themes.forEach((theme, i) => {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.className = "galleria-dot";
+          dot.setAttribute("role", "tab");
+          dot.setAttribute("aria-label", theme.year);
+          dot.innerHTML = `
+            <svg class="galleria-dot-ring" viewBox="0 0 24 24" aria-hidden="true">
+              <circle class="galleria-dot-ring-bg" cx="12" cy="12" r="10" pathLength="100" />
+              <circle class="galleria-dot-ring-progress" cx="12" cy="12" r="10" pathLength="100" />
+            </svg>
+            <span class="galleria-dot-inner"></span>
+          `;
+          dot.addEventListener("click", () => show(i));
+          dotsEl.appendChild(dot);
+        });
+
+        function show(i) {
+          index = (i + themes.length) % themes.length;
+          const theme = themes[index];
+
+          slideEl.classList.add("galleria-slide--changing");
+          img.src = theme.image;
+          img.alt = `${theme.year} — ${theme.title}`;
+          yearEl.textContent = theme.year;
+          themeEl.textContent = theme.title;
+          subEl.textContent = theme.subtitle;
+          subEl.hidden = !theme.subtitle;
+
+          infoYearEl.textContent = theme.year;
+          infoThemeEl.textContent = theme.title;
+          if (infoSubEl) infoSubEl.textContent = theme.subtitle;
+
+          galleria.classList.toggle("galleria--cancelled", !!theme.cancelled);
+          galleria.classList.toggle("galleria--empty", !!theme.empty);
+          galleria.classList.toggle("galleria--current", !!theme.current);
+
+          slideEl.classList.toggle(
+            "galleria-slide--cancelled",
+            !!theme.cancelled,
+          );
+          slideEl.classList.toggle("galleria-slide--empty", !!theme.empty);
+          slideEl.classList.toggle("galleria-slide--current", !!theme.current);
+
+          galleria.querySelectorAll(".galleria-dot").forEach((dot, j) => {
+            dot.classList.toggle("galleria-dot--active", j === index);
+            dot.setAttribute("aria-selected", j === index ? "true" : "false");
+          });
+
+          requestAnimationFrame(() => {
+            slideEl.classList.remove("galleria-slide--changing");
+          });
+
+          restartProgress();
+        }
+
+        let timer = setInterval(() => show(index + 1), cycleMs);
+
+        function resetTimer() {
+          clearInterval(timer);
+          timer = setInterval(() => show(index + 1), cycleMs);
+          restartProgress();
+        }
+
+        prevBtn.addEventListener("click", () => {
+          show(index - 1);
+          resetTimer();
+        });
+        nextBtn.addEventListener("click", () => {
+          show(index + 1);
+          resetTimer();
+        });
+
+        galleria.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowLeft") {
+            show(index - 1);
+            resetTimer();
+          }
+          if (e.key === "ArrowRight") {
+            show(index + 1);
+            resetTimer();
+          }
+        });
+
+        dotsEl.addEventListener("click", resetTimer);
+
+        show(index);
+      }
+    </script>
+  </body>
+</html>
