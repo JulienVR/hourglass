@@ -204,7 +204,7 @@ a:hover { color: var(--clr-primary-dim); }
 }
 
 .galleria-slide--cancelled::after {
-  content: 'cancelled';
+  content: 'Cancelled';
   position: absolute;
   top: var(--sp-2);
   right: var(--sp-2);
@@ -235,6 +235,50 @@ a:hover { color: var(--clr-primary-dim); }
   gap: 8px;
   margin-top: var(--sp-3);
   flex-wrap: wrap;
+}
+
+.galleria-info {
+  display: none;
+  text-align: center;
+  padding: var(--sp-2) 0;
+}
+
+.galleria-info-year {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--clr-text-muted);
+}
+
+.galleria-info-theme {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--clr-text);
+  margin-top: 4px;
+}
+
+.galleria-info-sub {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+  margin-top: 2px;
+}
+
+.galleria--cancelled .galleria-info-theme {
+  text-decoration: line-through;
+  opacity: 0.65;
+}
+
+.galleria--empty .galleria-info-theme {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.galleria--current .galleria-info-theme {
+  color: var(--clr-primary);
 }
 
 .galleria-dot {
@@ -1040,6 +1084,18 @@ a:hover { color: var(--clr-primary-dim); }
 }
 
 @media (max-width: 768px) {
+  .galleria-frame {
+    display: none;
+  }
+
+  .galleria-info {
+    display: block;
+  }
+
+  .galleria-dots {
+    margin-top: var(--sp-2);
+  }
+
   .rules-grid,
   .practical-grid,
   .schedule-images {

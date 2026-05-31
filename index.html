@@ -22,7 +22,7 @@
         </a>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#programme">Programme</a></li>
+          <li><a href="#programme">Program</a></li>
           <li><a href="#rules">Rules</a></li>
           <li><a href="#practical">Practical</a></li>
           <li><a href="#teams">Teams</a></li>
@@ -53,7 +53,7 @@
               <span class="chip-value">Sun 10 Aug</span>
             </div>
           </div>
-          <a href="#programme" class="btn-primary">See the programme</a>
+          <a href="#programme" class="btn-primary">See the program</a>
         </div>
 
         <div class="hero-galleria" id="theme-galleria" aria-label="Theme timeline" tabindex="0">
@@ -69,6 +69,11 @@
               </div>
             </div>
             <button type="button" class="galleria-btn galleria-btn--next" aria-label="Next year">&#8250;</button>
+          </div>
+          <div class="galleria-info" aria-live="polite">
+            <span class="galleria-info-year"></span>
+            <strong class="galleria-info-theme"></strong>
+            <span class="galleria-info-sub"></span>
           </div>
           <div class="galleria-dots" role="tablist" aria-label="Select year"></div>
           <div class="galleria-time-arrow" aria-hidden="true">
@@ -103,7 +108,7 @@
       <section class="section section--programme" id="programme">
         <div class="container">
           <div class="section-header">
-            <h2 class="section-title">Programme</h2>
+            <h2 class="section-title">Program</h2>
           </div>
           <div class="programme-days">
 
@@ -163,7 +168,7 @@
                 </li>
                 <li class="event-item">
                   <span class="event-time">18:30</span>
-                  <div class="event-body"><strong>Apéro</strong></div>
+                  <div class="event-body"><strong>Drinks</strong></div>
                 </li>
                 <li class="event-item">
                   <span class="event-time">19:30</span>
@@ -256,7 +261,7 @@
               <ul>
                 <li>Played <strong>7 vs 7</strong> on grass fields</li>
                 <li>Regular mixed line-ups: ABBAABBA… format (4W+3M / 4M+3W)</li>
-                <li>Toss decides jersey colour, field side, starting gender &amp; O/D</li>
+                <li>Toss decides jersey color, field side, starting gender &amp; O/D</li>
                 <li>Match lasts <strong>50 minutes</strong> or first to 15 points</li>
                 <li>Half-time at 8 points or 25 minutes</li>
                 <li>WFDF Rules of Ultimate 2021–2024</li>
@@ -303,7 +308,7 @@
       <section class="section section--practical" id="practical">
         <div class="container">
           <div class="section-header">
-            <h2 class="section-title">Practical info</h2>
+            <h2 class="section-title">Practical information</h2>
           </div>
           <div class="practical-grid">
             <div class="practical-card">
@@ -500,20 +505,20 @@
       const themes = [
         {
           year: 2018,
-          title: 'Égypte',
+          title: 'Egypt',
           subtitle: '',
           image: 'pictures/2018-egypte.png',
         },
         {
           year: 2019,
-          title: 'Gaulois',
+          title: 'Gauls',
           subtitle: '',
           image: 'pictures/2019-gaulois.png',
         },
         {
           year: 2020,
           title: 'Covid',
-          subtitle: 'cancelled',
+          subtitle: 'Cancelled',
           image: 'pictures/2020-covid.png',
           cancelled: true,
         },
@@ -526,19 +531,19 @@
         },
         {
           year: 2022,
-          title: 'Années folles',
+          title: 'Roaring Twenties',
           subtitle: 'Great Gatsby',
           image: 'pictures/2022-annees-folles.png',
         },
         {
           year: 2023,
-          title: 'Temps des maharajas et des maharanis',
+          title: 'Age of Maharajas and Maharanis',
           subtitle: '',
           image: 'pictures/2023-maharajas.png',
         },
         {
           year: 2024,
-          title: 'Far West',
+          title: 'Wild West',
           subtitle: '',
           image: 'pictures/2024-farwest.png',
         },
@@ -563,6 +568,9 @@
         const yearEl = galleria.querySelector('.galleria-year');
         const themeEl = galleria.querySelector('.galleria-theme');
         const subEl = galleria.querySelector('.galleria-sub');
+        const infoYearEl = galleria.querySelector('.galleria-info-year');
+        const infoThemeEl = galleria.querySelector('.galleria-info-theme');
+        const infoSubEl = galleria.querySelector('.galleria-info-sub');
         const slideEl = galleria.querySelector('.galleria-slide');
         const dotsEl = galleria.querySelector('.galleria-dots');
         const prevBtn = galleria.querySelector('.galleria-btn--prev');
@@ -591,6 +599,15 @@
           themeEl.textContent = theme.title;
           subEl.textContent = theme.subtitle;
           subEl.hidden = !theme.subtitle;
+
+          infoYearEl.textContent = theme.year;
+          infoThemeEl.textContent = theme.title;
+          infoSubEl.textContent = theme.subtitle;
+          infoSubEl.hidden = !theme.subtitle;
+
+          galleria.classList.toggle('galleria--cancelled', !!theme.cancelled);
+          galleria.classList.toggle('galleria--empty', !!theme.empty);
+          galleria.classList.toggle('galleria--current', !!theme.current);
 
           slideEl.classList.toggle('galleria-slide--cancelled', !!theme.cancelled);
           slideEl.classList.toggle('galleria-slide--empty', !!theme.empty);
