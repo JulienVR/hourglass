@@ -34,25 +34,44 @@
     <!-- HERO -->
     <header class="hero">
       <div class="hero-blobs"></div>
-      <div class="hero-content">
-        <img src="pictures/Logo-White-Foxes.png" alt="Whitefoxes Ultimate" class="hero-logo" />
-        <h1 class="hero-title">
-          <span class="title-year">2026</span>
-          <span class="title-main">Hourglass</span>
-          <span class="title-sub">Tournament</span>
-        </h1>
-        <p class="hero-anniversary">10 years of Whitefoxes</p>
-        <p class="hero-tagline">Back to the Future</p>
-        <div class="hero-date-block">
-          <div class="date-chip">
-            <span class="chip-value">Fri 8 Aug</span>
+      <div class="hero-layout">
+        <div class="hero-main">
+          <img src="pictures/Logo-White-Foxes.png" alt="Whitefoxes Ultimate" class="hero-logo" />
+          <h1 class="hero-title">
+            <span class="title-year">2026</span>
+            <span class="title-main">Hourglass</span>
+            <span class="title-sub">Tournament</span>
+          </h1>
+          <p class="hero-anniversary">10 years of Whitefoxes</p>
+          <p class="hero-tagline">Back to the Future</p>
+          <div class="hero-date-block">
+            <div class="date-chip">
+              <span class="chip-value">Fri 8 Aug</span>
+            </div>
+            <div class="date-divider">→</div>
+            <div class="date-chip">
+              <span class="chip-value">Sun 10 Aug</span>
+            </div>
           </div>
-          <div class="date-divider">→</div>
-          <div class="date-chip">
-            <span class="chip-value">Sun 10 Aug</span>
-          </div>
+          <a href="#programme" class="btn-primary">See the programme</a>
         </div>
-        <a href="#programme" class="btn-primary">See the programme</a>
+
+        <div class="hero-galleria" id="theme-galleria" aria-label="Hourglass themes through the years" tabindex="0">
+          <h3 class="galleria-label">Hourglass through the years</h3>
+          <div class="galleria-frame">
+            <button type="button" class="galleria-btn galleria-btn--prev" aria-label="Previous year">&#8249;</button>
+            <div class="galleria-slide">
+              <img class="galleria-img" src="" alt="" />
+              <div class="galleria-caption">
+                <span class="galleria-year"></span>
+                <strong class="galleria-theme"></strong>
+                <span class="galleria-sub"></span>
+              </div>
+            </div>
+            <button type="button" class="galleria-btn galleria-btn--next" aria-label="Next year">&#8250;</button>
+          </div>
+          <div class="galleria-dots" role="tablist" aria-label="Select year"></div>
+        </div>
       </div>
     </header>
 
@@ -71,62 +90,6 @@
             <p>
               This year's theme is <strong>Back to the Future</strong>: DeLoreans, flux capacitors, and costumes from any era welcome. 12 teams, grass fields, good vibes.
             </p>
-          </div>
-          <div class="theme-timeline">
-            <h3 class="theme-timeline-title">Hourglass through the years</h3>
-            <ol class="timeline">
-              <li class="timeline-item">
-                <span class="timeline-year">2018</span>
-                <span class="timeline-dot"></span>
-                <div class="timeline-content"><strong>Égypte</strong></div>
-              </li>
-              <li class="timeline-item">
-                <span class="timeline-year">2019</span>
-                <span class="timeline-dot"></span>
-                <div class="timeline-content"><strong>Gaulois</strong></div>
-              </li>
-              <li class="timeline-item timeline-item--cancelled">
-                <span class="timeline-year">2020</span>
-                <span class="timeline-dot"></span>
-                <div class="timeline-content">
-                  <strong>Covid</strong>
-                  <span class="timeline-note">cancelled</span>
-                </div>
-              </li>
-              <li class="timeline-item timeline-item--empty">
-                <span class="timeline-year">2021</span>
-                <span class="timeline-dot"></span>
-                <div class="timeline-content"><span class="timeline-note">no theme</span></div>
-              </li>
-              <li class="timeline-item">
-                <span class="timeline-year">2022</span>
-                <span class="timeline-dot"></span>
-                <div class="timeline-content">
-                  <strong>Années folles</strong>
-                  <span class="timeline-sub">Great Gatsby</span>
-                </div>
-              </li>
-              <li class="timeline-item">
-                <span class="timeline-year">2023</span>
-                <span class="timeline-dot"></span>
-                <div class="timeline-content"><strong>Temps des maharajas et des maharanis</strong></div>
-              </li>
-              <li class="timeline-item">
-                <span class="timeline-year">2024</span>
-                <span class="timeline-dot"></span>
-                <div class="timeline-content"><strong>Far West</strong></div>
-              </li>
-              <li class="timeline-item">
-                <span class="timeline-year">2025</span>
-                <span class="timeline-dot"></span>
-                <div class="timeline-content"><strong>Back to Woodstock</strong></div>
-              </li>
-              <li class="timeline-item timeline-item--current">
-                <span class="timeline-year">2026</span>
-                <span class="timeline-dot"></span>
-                <div class="timeline-content"><strong>Back to the Future</strong></div>
-              </li>
-            </ol>
           </div>
         </div>
       </section>
@@ -528,6 +491,126 @@
           }
         });
       });
+
+      const themes = [
+        {
+          year: 2018,
+          title: 'Égypte',
+          subtitle: '',
+          image: 'pictures/2018-egypte.png',
+        },
+        {
+          year: 2019,
+          title: 'Gaulois',
+          subtitle: '',
+          image: 'pictures/2019-gaulois.png',
+        },
+        {
+          year: 2020,
+          title: 'Covid',
+          subtitle: 'cancelled',
+          image: 'pictures/2020-covid.png',
+          cancelled: true,
+        },
+        {
+          year: 2021,
+          title: 'No theme',
+          subtitle: '',
+          image: 'pictures/2021-notheme.png',
+          empty: true,
+        },
+        {
+          year: 2022,
+          title: 'Années folles',
+          subtitle: 'Great Gatsby',
+          image: 'pictures/2022-annees-folles.png',
+        },
+        {
+          year: 2023,
+          title: 'Temps des maharajas et des maharanis',
+          subtitle: '',
+          image: 'pictures/2023-maharajas.png',
+        },
+        {
+          year: 2024,
+          title: 'Far West',
+          subtitle: '',
+          image: 'pictures/2024-farwest.png',
+        },
+        {
+          year: 2025,
+          title: 'Back to Woodstock',
+          subtitle: '',
+          image: 'pictures/woodstock.jpg',
+        },
+        {
+          year: 2026,
+          title: 'Back to the Future',
+          subtitle: '',
+          image: 'pictures/2026-back-to-future.png',
+          current: true,
+        },
+      ];
+
+      const galleria = document.getElementById('theme-galleria');
+      if (galleria) {
+        const img = galleria.querySelector('.galleria-img');
+        const yearEl = galleria.querySelector('.galleria-year');
+        const themeEl = galleria.querySelector('.galleria-theme');
+        const subEl = galleria.querySelector('.galleria-sub');
+        const slideEl = galleria.querySelector('.galleria-slide');
+        const dotsEl = galleria.querySelector('.galleria-dots');
+        const prevBtn = galleria.querySelector('.galleria-btn--prev');
+        const nextBtn = galleria.querySelector('.galleria-btn--next');
+        let index = themes.findIndex(t => t.current);
+        if (index === -1) index = themes.length - 1;
+
+        themes.forEach((theme, i) => {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'galleria-dot';
+          dot.setAttribute('role', 'tab');
+          dot.setAttribute('aria-label', theme.year);
+          dot.addEventListener('click', () => show(i));
+          dotsEl.appendChild(dot);
+        });
+
+        function show(i) {
+          index = (i + themes.length) % themes.length;
+          const theme = themes[index];
+
+          slideEl.classList.add('galleria-slide--changing');
+          img.src = theme.image;
+          img.alt = `${theme.year} — ${theme.title}`;
+          yearEl.textContent = theme.year;
+          themeEl.textContent = theme.title;
+          subEl.textContent = theme.subtitle;
+          subEl.hidden = !theme.subtitle;
+
+          slideEl.classList.toggle('galleria-slide--cancelled', !!theme.cancelled);
+          slideEl.classList.toggle('galleria-slide--empty', !!theme.empty);
+          slideEl.classList.toggle('galleria-slide--current', !!theme.current);
+
+          galleria.querySelectorAll('.galleria-dot').forEach((dot, j) => {
+            dot.classList.toggle('galleria-dot--active', j === index);
+            dot.setAttribute('aria-selected', j === index ? 'true' : 'false');
+          });
+
+          requestAnimationFrame(() => {
+            slideEl.classList.remove('galleria-slide--changing');
+          });
+        }
+
+        prevBtn.addEventListener('click', () => show(index - 1));
+        nextBtn.addEventListener('click', () => show(index + 1));
+
+        galleria.addEventListener('keydown', e => {
+          if (e.key === 'ArrowLeft') show(index - 1);
+          if (e.key === 'ArrowRight') show(index + 1);
+        });
+
+        show(index);
+      }
     </script>
   </body>
 </html>
