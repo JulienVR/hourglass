@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /hourglass/
+
+Sitemap: https://whitefoxes.be/sitemap.xml
