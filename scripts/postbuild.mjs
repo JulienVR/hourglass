@@ -2,18 +2,9 @@ import { mkdir, rename, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
 const dist = 'dist';
-const appDir = join(dist, 'hourglass');
+const HOME = 'https://whitefoxes.be/';
 
-await mkdir(appDir, { recursive: true });
-
-for (const name of ['index.html', 'assets', 'favicon.png', 'pictures', 'vite.svg']) {
-  try {
-    await rename(join(dist, name), join(appDir, name));
-  } catch (error) {
-    if (error.code !== 'ENOENT') throw error;
-  }
-}
-
+// Keep secret at /secret/
 try {
   await mkdir(join(dist, 'secret'), { recursive: true });
   await rename(join(dist, 'secret.html'), join(dist, 'secret', 'index.html'));
@@ -21,7 +12,7 @@ try {
   if (error.code !== 'ENOENT') throw error;
 }
 
-const redirectHtml = (target = '/hourglass/') => `<!DOCTYPE html>
+const redirectHtml = (target = HOME) => `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -36,5 +27,7 @@ const redirectHtml = (target = '/hourglass/') => `<!DOCTYPE html>
 </html>
 `;
 
-await writeFile(join(dist, 'index.html'), redirectHtml(), 'utf8');
+// Old /hourglass bookmarks + unknown paths (GitHub Pages 404.html) → home
+await mkdir(join(dist, 'hourglass'), { recursive: true });
+await writeFile(join(dist, 'hourglass', 'index.html'), redirectHtml(), 'utf8');
 await writeFile(join(dist, '404.html'), redirectHtml(), 'utf8');
